@@ -30,6 +30,12 @@
           <p>{{ restaurant.location.address1 }}, {{ restaurant.location.city }}</p>
           <p>Note : {{ restaurant.rating }}</p>
           <p>Prix : {{ restaurant.price }}</p>
+          <p>Nombre d'avis : {{ restaurant.review_count }}</p>
+          <p>Distance : {{ restaurant.distance }}</p>
+          <p>Numéro de téléphone : {{ restaurant.display_phone }}</p>
+          <p>Site web : {{ restaurant.url }}</p>
+          <p>Image : <img src="{{ restaurant.image_url }}" alt="Image du restaurant"></p>
+          
         </li>
       </ul>
       
