@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="icon" type="image/x-icon" href="assets/logo.ico"> 
+
+</head>
+
+
+
+<body>
+
+  <header >
+  </header>
+
+  <main>
+
+    <h1>Welcome to Resto Finder!</h1>
+    <form  [formGroup]="applyForm" (submit)="search()" >
+        <label for="term">Recherche</label>
+        <input type="text" name="term" #term  placeholder="Terme de recherche" required formControlName="term">
+        <label for="location">Emplacement</label>
+        <input type="text" name="location" #location  placeholder="Rechercher" required formControlName="location">
+        <button type="submit">Find</button>
+      </form>
+
+      <ul>
+        <li *ngFor="let restaurant of restaurants">
+          <h3>{{ restaurant.name }}</h3>
+          <p>{{ restaurant.location.address1 }}, {{ restaurant.location.city }}</p>
+          <p>Note : {{ restaurant.rating }}</p>
+          <p>Prix : {{ restaurant.price }}</p>
+        </li>
+      </ul>
+      
+  
+  </main>
+
+  <footer>
+  
+  </footer>
+
+</body>
+
+</html>

@@ -4,20 +4,32 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule , HTTP_INTERCEPTORS} from '@angular/common/http';
 
 import { YelpService } from './yelp.service';
+import { HomeComponent } from './home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
+import { HttpLoggingInterceptor } from './http-logging.interceptor';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    HttpClientModule
+    ReactiveFormsModule,
+    FormsModule,
   ],
-  providers: [YelpService],
+  providers: [YelpService ,
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: HttpLoggingInterceptor,
+    multi: true
+  }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,10 @@
-h1
-{
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 250%;
-}
+
+  .logo {
+    display: left;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+  }
+
+
