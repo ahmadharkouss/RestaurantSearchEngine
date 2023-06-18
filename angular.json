@@ -51,7 +51,8 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": []
             }
           },
           "defaultConfiguration": "production"
@@ -71,7 +72,8 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "RestaurantSearchEngine:build"
+            "browserTarget": "RestaurantSearchEngine:build",
+            "proxyConfig": "src/proxy.config.json"
           }
         },
         "test": {
