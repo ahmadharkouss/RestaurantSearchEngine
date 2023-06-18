@@ -10,11 +10,13 @@ import { YelpService } from './yelp.service';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { HttpLoggingInterceptor } from './http-logging.interceptor';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,

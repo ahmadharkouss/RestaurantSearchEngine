@@ -1,0 +1,46 @@
+<label for="search-input">Search</label>
+<input id="search-input" type="text" placeholder="Search for a location">
+<div class="map-container">
+  <div id="map" class="map"></div>
+  <div class="restaurant-list">
+    <div class="filters">
+      <label for="ranked-by">Ranked by:</label>
+      <select id="ranked-by" (change)="applyFilters()">
+        <option value="google.maps.places.RankBy.PROMINENCE">Popular</option>
+        <option value="google.maps.places.RankBy.DISTANCE">Distance</option>
+      </select>
+      
+      <label for="min-price-filter">Minimum Price Level:</label>
+      <select id="min-price-filter" (change)="applyFilters()">
+        <option value="">All</option>
+        <option value="0">Free</option>
+        <option value="1">Inexpensive</option>
+        <option value="2">Moderate</option>
+        <option value="3">Expensive</option>
+        <option value="4">Very Expensive</option>
+      </select>
+      
+      <label for="max-price-filter">Maximum Price Level:</label>
+      <select id="max-price-filter" (change)="applyFilters()">
+        <option value="">All</option>
+        <option value="0">Free</option>
+        <option value="1">Inexpensive</option>
+        <option value="2">Moderate</option>
+        <option value="3">Expensive</option>
+        <option value="4">Very Expensive</option>
+      </select>
+      
+      <label for="type-filter">Type of Restaurant:</label>
+      <input id="type-filter" type="text" placeholder="Enter type of restaurant" (change)="applyFilters()">
+    </div>
+    
+    <ul>
+      <li *ngFor="let restaurant of restaurants">
+        <h3>{{ restaurant.name }}</h3>
+        <p>{{ restaurant.vicinity }}</p>
+        <img [src]="getPhotoUrl(restaurant)" alt="Restaurant Photo">
+      </li>
+    </ul>
+  </div>
+</div>
+
