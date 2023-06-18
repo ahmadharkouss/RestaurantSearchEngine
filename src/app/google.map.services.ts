@@ -16,7 +16,7 @@ export class GoogleMapsApiService
   constructor(private http: HttpClient) { }
 
   getPlaceDetails(placeId: string): Observable<any> {
-    const url = `${this.apiUrl}?fields=&place_id=${placeId}&key=${this.apiKey}`;
+    const url = `https://maps.googleapis.com/maps/api/place/details/json?fields=&place_id=ChIJN1t_tDeuEmsRUsoyG83frY4&key=AIzaSyAiA-lVfOcpy8DkqPEhL09ueJtCNe1vvbU`;
     return this.http.get<any>(url);
   }
  
