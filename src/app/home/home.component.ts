@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit
 
   ngOnInit() {
     const loader = new Loader({
-      apiKey: 'AIzaSyAiA-lVfOcpy8DkqPEhL09ueJtCNe1vvbU',
+      apiKey: 'AIzaSyD_N63Ju65PKL0xqCyqBsNCvIw38MBTCGg',
       libraries: ['places'],
     });
     loader.load().then(() => {
