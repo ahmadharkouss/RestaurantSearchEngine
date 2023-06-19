@@ -178,14 +178,25 @@ export class HomeComponent implements OnInit
     this.markers = [];
   }
 
-  getPlaceDetails(placeId : string | undefined=''): void {
-    this.googleMapsApiService.getPlaceDetails(placeId).subscribe(
-      (response) => {
-        console.log('Place details:', response);
-      },
-      (error) => {
-        console.error('Error retrieving place details:', error);
+  getPlaceDetails(placeId : string | undefined=''): void 
+  {
+    const request = {
+      placeId: placeId,
+      //fields: ['name', 'rating', 'formatted_phone_number', 'geometry']
+    };
+
+    this.placesService?.getDetails(request, (results, status) => 
+    {
+      if (status === google.maps.places.PlacesServiceStatus.OK) 
+      {
+        //Json stringify result 
+        console.log(results?.reviews);
       }
+      else 
+      {
+        console.error('Failed to Find Place Search Details:', status);
+      }
+    }
     );
   }
 

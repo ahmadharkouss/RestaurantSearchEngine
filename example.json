@@ -1,0 +1,364 @@
+{
+    "html_attributions" : [],
+    "result" : {
+       "address_components" : [
+          {
+             "long_name" : "48",
+             "short_name" : "48",
+             "types" : [ "street_number" ]
+          },
+          {
+             "long_name" : "Pirrama Road",
+             "short_name" : "Pirrama Rd",
+             "types" : [ "route" ]
+          },
+          {
+             "long_name" : "Pyrmont",
+             "short_name" : "Pyrmont",
+             "types" : [ "locality", "political" ]
+          },
+          {
+             "long_name" : "City of Sydney",
+             "short_name" : "City of Sydney",
+             "types" : [ "administrative_area_level_2", "political" ]
+          },
+          {
+             "long_name" : "New South Wales",
+             "short_name" : "NSW",
+             "types" : [ "administrative_area_level_1", "political" ]
+          },
+          {
+             "long_name" : "Australia",
+             "short_name" : "AU",
+             "types" : [ "country", "political" ]
+          },
+          {
+             "long_name" : "2009",
+             "short_name" : "2009",
+             "types" : [ "postal_code" ]
+          }
+       ],
+       "adr_address" : "\u003cspan class=\"street-address\"\u003e48 Pirrama Rd\u003c/span\u003e, \u003cspan class=\"locality\"\u003ePyrmont\u003c/span\u003e \u003cspan class=\"region\"\u003eNSW\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e2009\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eAustralia\u003c/span\u003e",
+       "business_status" : "OPERATIONAL",
+       "current_opening_hours" : {
+          "open_now" : false,
+          "periods" : [
+             {
+                "close" : {
+                   "date" : "2023-06-19",
+                   "day" : 1,
+                   "time" : "1730"
+                },
+                "open" : {
+                   "date" : "2023-06-19",
+                   "day" : 1,
+                   "time" : "0830"
+                }
+             },
+             {
+                "close" : {
+                   "date" : "2023-06-20",
+                   "day" : 2,
+                   "time" : "1730"
+                },
+                "open" : {
+                   "date" : "2023-06-20",
+                   "day" : 2,
+                   "time" : "0830"
+                }
+             },
+             {
+                "close" : {
+                   "date" : "2023-06-21",
+                   "day" : 3,
+                   "time" : "1730"
+                },
+                "open" : {
+                   "date" : "2023-06-21",
+                   "day" : 3,
+                   "time" : "0830"
+                }
+             },
+             {
+                "close" : {
+                   "date" : "2023-06-22",
+                   "day" : 4,
+                   "time" : "1700"
+                },
+                "open" : {
+                   "date" : "2023-06-22",
+                   "day" : 4,
+                   "time" : "0830"
+                }
+             },
+             {
+                "close" : {
+                   "date" : "2023-06-23",
+                   "day" : 5,
+                   "time" : "1700"
+                },
+                "open" : {
+                   "date" : "2023-06-23",
+                   "day" : 5,
+                   "time" : "0830"
+                }
+             }
+          ],
+          "weekday_text" : [
+             "Monday: 8:30\u202fAM\u2009\u2013\u20095:30\u202fPM",
+             "Tuesday: 8:30\u202fAM\u2009\u2013\u20095:30\u202fPM",
+             "Wednesday: 8:30\u202fAM\u2009\u2013\u20095:30\u202fPM",
+             "Thursday: 8:30\u202fAM\u2009\u2013\u20095:00\u202fPM",
+             "Friday: 8:30\u202fAM\u2009\u2013\u20095:00\u202fPM",
+             "Saturday: Closed",
+             "Sunday: Closed"
+          ]
+       },
+       "formatted_address" : "48 Pirrama Rd, Pyrmont NSW 2009, Australia",
+       "formatted_phone_number" : "(02) 9374 4000",
+       "geometry" : {
+          "location" : {
+             "lat" : -33.866489,
+             "lng" : 151.1958561
+          },
+          "viewport" : {
+             "northeast" : {
+                "lat" : -33.8655112697085,
+                "lng" : 151.1971156302915
+             },
+             "southwest" : {
+                "lat" : -33.86820923029149,
+                "lng" : 151.1944176697085
+             }
+          }
+       },
+       "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+       "icon_background_color" : "#7B9EB0",
+       "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+       "international_phone_number" : "+61 2 9374 4000",
+       "name" : "Google Workplace 6",
+       "opening_hours" : {
+          "open_now" : false,
+          "periods" : [
+             {
+                "close" : {
+                   "day" : 1,
+                   "time" : "1730"
+                },
+                "open" : {
+                   "day" : 1,
+                   "time" : "0830"
+                }
+             },
+             {
+                "close" : {
+                   "day" : 2,
+                   "time" : "1730"
+                },
+                "open" : {
+                   "day" : 2,
+                   "time" : "0830"
+                }
+             },
+             {
+                "close" : {
+                   "day" : 3,
+                   "time" : "1730"
+                },
+                "open" : {
+                   "day" : 3,
+                   "time" : "0830"
+                }
+             },
+             {
+                "close" : {
+                   "day" : 4,
+                   "time" : "1700"
+                },
+                "open" : {
+                   "day" : 4,
+                   "time" : "0830"
+                }
+             },
+             {
+                "close" : {
+                   "day" : 5,
+                   "time" : "1700"
+                },
+                "open" : {
+                   "day" : 5,
+                   "time" : "0830"
+                }
+             }
+          ],
+          "weekday_text" : [
+             "Monday: 8:30\u202fAM\u2009\u2013\u20095:30\u202fPM",
+             "Tuesday: 8:30\u202fAM\u2009\u2013\u20095:30\u202fPM",
+             "Wednesday: 8:30\u202fAM\u2009\u2013\u20095:30\u202fPM",
+             "Thursday: 8:30\u202fAM\u2009\u2013\u20095:00\u202fPM",
+             "Friday: 8:30\u202fAM\u2009\u2013\u20095:00\u202fPM",
+             "Saturday: Closed",
+             "Sunday: Closed"
+          ]
+       },
+       "photos" : [
+          {
+             "height" : 3024,
+             "html_attributions" : [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/104641095422852249098\"\u003eMatty B\u003c/a\u003e"
+             ],
+             "photo_reference" : "AZose0lUmrhQfxZ4mGkqLdpUTN-tei0i3QNVqdbQQFV1hxEOiQZDXrwUIzGDIJN1-xwru0sD8gI4g81nlPgHH9LliWXhQzm1cfOGguPH1cFZG8BQu_gWy2qplV9X_Ug0KiXQxOkD43OfEYNhSIuZnoOj_0Lab-uPdXCLJ20SoDqCzjnNtC_3",
+             "width" : 4032
+          },
+          {
+             "height" : 3264,
+             "html_attributions" : [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/102493344958625549078\"\u003eThomas Li\u003c/a\u003e"
+             ],
+             "photo_reference" : "AZose0nHJnCpO-wKCTgYOQcHERd3wG5Il67o4erY4k-D8fiSaI2XVqfKqp14TKAKUsZCFGMAd3scWB-tcskx0ws7dZGQFKLtFnNO62B6obIGS29JVGfHSqRmAah94pFkmt0ytzKM-x3heZD4V6u9mDYH7_oHAAv9oAmqSFTNUHc7y53CsU6s",
+             "width" : 4912
+          },
+          {
+             "height" : 3024,
+             "html_attributions" : [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/109073253434498369454\"\u003esang suh\u003c/a\u003e"
+             ],
+             "photo_reference" : "AZose0lB2RvY05Yo-wtCFmjznTXAhNO8_aA9A3_Jg1zIowNpz7HDPKf86gF6HrBTEHjnyGlEF9NZSaHnJNb2vgFyHNnXwc1VYQe7ZbEpACChmv8WBvYhxAnYZgGzvoOOMGTFFGBM-c_QKzqW8vc_DRc7y_tiSA4vyGlg4pWx4OrM23gms_Oz",
+             "width" : 4032
+          },
+          {
+             "height" : 4016,
+             "html_attributions" : [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/107755640736541028674\"\u003eJonah Dell\u003c/a\u003e"
+             ],
+             "photo_reference" : "AZose0khqPeWi6PaTSk8v57F2okC2I9IqWzQDLMF2fcsRlKWGUsYlnMy8HvL6VDOUjpsW8fa0xTBfuDKd05cQIaN9tsI5hqHCKYPmBqR70dwvP1K6xkWUGLDIdliBowZfpzt3WaS-uZBjohFnbHjhheUqkR3BtjW0zTF1ZZt3bD7WTC-mQRl",
+             "width" : 6016
+          },
+          {
+             "height" : 4032,
+             "html_attributions" : [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/114541402993501063706\"\u003eChidi Ilobi\u003c/a\u003e"
+             ],
+             "photo_reference" : "AZose0nkq6LcVhiIlv_SLWIBxyHmASuvFCUSgnBONFJ5q3k0d0HD478uVn0k-LWXrc9PkVUxCpJ2ti607aEAXYU8RagHh8De4YvbSVQ0JB9eivgk61vlQtUgEgd58LHRCTEzEHSsQ2I3JonPRSAj1yzOSp6oTsWz2ieB3nBlWCg05eudSLAi",
+             "width" : 3024
+          },
+          {
+             "height" : 3024,
+             "html_attributions" : [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/102987930970147458128\"\u003eGarrett N.\u003c/a\u003e"
+             ],
+             "photo_reference" : "AZose0mdbhzrjIoJRi3Er0Y2Qlqn_tKw85ZvC-1Rw256c-PknPgGiedi8aqp9R1CaeqrQCEt5sudgT0ueL0ObQrjhEX-N7vF8mD1tHko9PHlBcpz9Ql3SYickOD5WPXw214yNYSUsOruSiyZe75X15q99P3wlsYZl-Zn7x45-Q4UM9Z6B6Lo",
+             "width" : 4032
+          },
+          {
+             "height" : 2448,
+             "html_attributions" : [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/109424226596487740627\"\u003eWilliam Li\u003c/a\u003e"
+             ],
+             "photo_reference" : "AZose0kf28HnkHTsm5mCqGstXBaHYTRIiFpuvZ5nleUicRbzqa4n99i8htz-JDGsc9OPWMtShPGo8qjWX-buD6l-h77HqOQAZRCmGcmDCK1D8eZBC7v5A3F22Uth96qg0ONC-LhwMJznJUV-_VuTHoypqAVr71mZohqtV03QvSukwLiG4sD4",
+             "width" : 3264
+          },
+          {
+             "height" : 3921,
+             "html_attributions" : [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/102987930970147458128\"\u003eGarrett N.\u003c/a\u003e"
+             ],
+             "photo_reference" : "AZose0lgBk3O_bpiMyg-xYpGSm3dfoGWd9ocpLXQ07DXb8pSv4GgReQIfzl6vswCVAqnGv3SWBX-SV68nzdJJ3WvcFkCP57C4aHIM2BZBy_BWkLyIxg-kmGdcJb11FEmChl_bmspw1b-tu-E0dGP6YiKB1_u36MAqLULDKUnyByNc44vhPIS",
+             "width" : 2941
+          },
+          {
+             "height" : 4032,
+             "html_attributions" : [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/102558609090086310801\"\u003eHuy Tran\u003c/a\u003e"
+             ],
+             "photo_reference" : "AZose0mzLqL5leTyR5D52T1bgR66frBz86Xyuxypoha6ujXGR9A9Q2Z2n6i1plN39JYNRQOfPVEu5BfhXsWK40YFJotfHoiKokIUZy-iwwveQ29SCrs5BPQXxf7U2fj9Rm027u5xCOulmbB8J081wydH2WpTeUpeuWNIoVf1KC0OQGFw8O_n",
+             "width" : 3024
+          },
+          {
+             "height" : 3000,
+             "html_attributions" : [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/104140636088525487284\"\u003eGerhard Havlik\u003c/a\u003e"
+             ],
+             "photo_reference" : "AZose0lmBaIVvtXSHebOXfomPaUoT3LZDLLJmDkHcSTvrCx1Vbxtw6Lpnen5DNtpFzYEuQF6grHDwH5vVwWlSOFJLncKhKj5kSBbB2wGx61FKgXrxcrhjCI205Eb8dv20YGj6jGU8Jlr37eLrZT815jXUgKRohalbETwRFrrw_zwkDsvwmII",
+             "width" : 4000
+          }
+       ],
+       "place_id" : "ChIJN1t_tDeuEmsRUsoyG83frY4",
+       "plus_code" : {
+          "compound_code" : "45MW+C8 Pyrmont NSW, Australia",
+          "global_code" : "4RRH45MW+C8"
+       },
+       "rating" : 4,
+       "reference" : "ChIJN1t_tDeuEmsRUsoyG83frY4",
+       "reviews" : [
+          {
+             "author_name" : "Sydney Darts",
+             "author_url" : "https://www.google.com/maps/contrib/118354988078691934248/reviews",
+             "language" : "en",
+             "original_language" : "en",
+             "profile_photo_url" : "https://lh3.googleusercontent.com/a-/AD_cMMSWQDazZR-fnFA0gZI03teYMDfXRWkFPL2c4oxR=s128-c0x00000000-cc-rp-mo",
+             "rating" : 1,
+             "relative_time_description" : "4 months ago",
+             "text" : "Absolutely disgusted with Google Ads. They signed me up to automatic billing WITHOUT CONSENT! Then charge me to advertise for events that have long since finished. There is no phone support available as they say the office hours are 9-5 ..EVEN when you call at 10am! And you can't remove your credit card without adding a different one so they can skim you more. UTTER DISGRACE. AVOID AT ALL COSTS. Even facebook ads are more trustworthy (and thats saying something!)",
+             "time" : 1675291266,
+             "translated" : false
+          },
+          {
+             "author_name" : "Federico Diaz",
+             "author_url" : "https://www.google.com/maps/contrib/109224293839104261485/reviews",
+             "language" : "en",
+             "original_language" : "en",
+             "profile_photo_url" : "https://lh3.googleusercontent.com/a-/AD_cMMSDP2rIuGCJOKC6iJBRuYTX4wbNWIFF1SWsKOHLEA=s128-c0x00000000-cc-rp-mo",
+             "rating" : 1,
+             "relative_time_description" : "a month ago",
+             "text" : "Worst place environment i have ever worked for. I mean in my area everyone (mostly) all were nice but we were not allowed to talk, nor sit nor used facilities that others could. What Im trying to say is is a hierarchy pyramid were classes are separated. Ex, the people of the kitchen are treated somewhat rude. There is a general discrimination that is tolerated. Ill say is celebrated as a sort of cancel culture. Cleaners also are also part of the lower casts. I understand like a society in the middle ages where u couldn't mix u might get contagious of the lower classes deseases. Still this is 2023. I guess they use to be common areas to everyone to sit but since recently that is now forbidden. To many commoners eating with the high borns. Absolutely understandable.  Besides that little intimidating and harassing middle ages behaviour of positive reinforcement of bullying factor I would say that the place \"looks\" lovely",
+             "time" : 1683178697,
+             "translated" : false
+          },
+          {
+             "author_name" : "Matty B",
+             "author_url" : "https://www.google.com/maps/contrib/104641095422852249098/reviews",
+             "language" : "en",
+             "original_language" : "en",
+             "profile_photo_url" : "https://lh3.googleusercontent.com/a-/AD_cMMQ5Yl50pgKfJlrybrOMAnCH85qyEf-8B5pgMT5_gP0=s128-c0x00000000-cc-rp-mo-ba7",
+             "rating" : 5,
+             "relative_time_description" : "9 months ago",
+             "text" : "Really cool office, with nice views of downtown.",
+             "time" : 1661917885,
+             "translated" : false
+          },
+          {
+             "author_name" : "Beep Beep Toot",
+             "author_url" : "https://www.google.com/maps/contrib/117815443957555137502/reviews",
+             "language" : "en",
+             "original_language" : "en",
+             "profile_photo_url" : "https://lh3.googleusercontent.com/a-/AD_cMMSs1VuEwFQumVLcGhzyGVTK7ZdOTNzomz44Gxal1Q=s128-c0x00000000-cc-rp-mo",
+             "rating" : 1,
+             "relative_time_description" : "4 months ago",
+             "text" : "Google has allowed another business to hijack my google business listing \"Cairns Airport Transfers\" and display our competitors website instead... Every time we claim our business profile and change the website to ours, google suspends us, over and over again.  This is the most stressful experience as google send us from one department to the next, its like no one really know what there doing",
+             "time" : 1675722932,
+             "translated" : false
+          },
+          {
+             "author_name" : "Conrad Yap",
+             "author_url" : "https://www.google.com/maps/contrib/110099122506072519835/reviews",
+             "language" : "en",
+             "original_language" : "en",
+             "profile_photo_url" : "https://lh3.googleusercontent.com/a/AAcHTtdDkT3JH75_iSuOGV0dspTPAXucuPD8dlR2RJmZ=s128-c0x00000000-cc-rp-mo",
+             "rating" : 1,
+             "relative_time_description" : "3 months ago",
+             "text" : "My complaint is on Google's apparent misunderstanding of my cohort, overseas Chinese decendants, who understand and speak Chinese but do not read written Chinese.\nI frequent Chinese contents YouTube videos and movies. This seems to lead Google to think I can also read Chinese hence I keep getting Chinese advertisements which Google obviously think is helpful for me.\nGoogle, please understand that a lot of Chinese decendants cannot read Chinese so please stop these Chinese advertisements.  It's very irritating,  for me at least. Thank you.",
+             "time" : 1678180368,
+             "translated" : false
+          }
+       ],
+       "types" : [ "point_of_interest", "establishment" ],
+       "url" : "https://maps.google.com/?cid=10281119596374313554",
+       "user_ratings_total" : 969,
+       "utc_offset" : 600,
+       "vicinity" : "48 Pirrama Road, Pyrmont",
+       "website" : "http://google.com/",
+       "wheelchair_accessible_entrance" : true
+    },
+    "status" : "OK"
+ }
