@@ -2,8 +2,6 @@ import { Component, OnInit , Inject } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
 import { GoogleMapsApiService } from '../google.map.services';
 
-
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -128,7 +126,7 @@ export class HomeComponent implements OnInit
         this.clearMarkers();
         // Add markers for each restaurant
       this.restaurants.forEach(restaurant => {
-        this.getPlaceDetails(restaurant.place_id);
+        this.googleMapsApiService.getPlaceDetails(restaurant.place_id , this.map);
         const marker = new google.maps.Marker({
           position: restaurant.geometry?.location,
           map: this.map,
@@ -178,19 +176,20 @@ export class HomeComponent implements OnInit
     this.markers = [];
   }
 
-  getPlaceDetails(placeId : string | undefined=''): void 
+  getPlaceDetails(placeId : string | undefined='' , map : any): void 
   {
+    let service  = new google.maps.places.PlacesService(map);
     const request = {
       placeId: placeId,
       //fields: ['name', 'rating', 'formatted_phone_number', 'geometry']
     };
 
-    this.placesService?.getDetails(request, (results, status) => 
+    service?.getDetails(request, (results, status) => 
     {
       if (status === google.maps.places.PlacesServiceStatus.OK) 
       {
         //Json stringify result 
-        console.log(results?.reviews);
+        console.log(JSON.stringify(results));
       }
       else 
       {
