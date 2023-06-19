@@ -14,10 +14,10 @@
   <main>
 
     <h1>Welcome to Resto Finder!</h1>
-    <h1>test</h1>
 
     <label for="search-input">Search</label>
     <input id="search-input" type="text" placeholder="Search for a location">
+
     <div class="map-container">
       <div id="map" class="map"></div>
       <div class="restaurant-list">
@@ -54,14 +54,12 @@
         
         <ul>
           <li *ngFor="let restaurant of restaurants">
-            <h3>{{ restaurant.name }}</h3>
-            <p>{{ restaurant.vicinity }}</p>
-            <h3>Rating: {{ restaurant.website}}</h3>
             <img [src]="getPhotoUrl(restaurant)" alt="Restaurant Photo">
           </li>
         </ul>
       </div>
     </div>
+    <app-restaurant *ngFor="let restaurant of  restaurants_real"[restaurant]="restaurant" ></app-restaurant>
       
   
   </main>

@@ -1,6 +1,7 @@
 import { Component, OnInit , Inject } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
-import { GoogleMapsApiService } from '../google.map.services';
+import { GoogleMapsApiService } from '../places.services';
+import { Restaurant } from '../restaurant';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ export class HomeComponent implements OnInit
   public map: google.maps.Map | undefined;
   public placesService: google.maps.places.PlacesService | undefined;
   public restaurants: google.maps.places.PlaceResult[] = [];
+  public restaurants_real:Restaurant[] = [];
   public markers: google.maps.Marker[] = [];
   constructor(@Inject(GoogleMapsApiService) private googleMapsApiService: GoogleMapsApiService) { }
 
@@ -122,16 +124,15 @@ export class HomeComponent implements OnInit
     this.placesService?.nearbySearch(request, (results, status) => {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
         this.restaurants = results || [];
-        console.log(this.restaurants);
         this.clearMarkers();
         // Add markers for each restaurant
-      this.restaurants.forEach(restaurant => {
-        this.googleMapsApiService.getPlaceDetails(restaurant.place_id , this.map);
+       this.restaurants.forEach(restaurant => {
         const marker = new google.maps.Marker({
           position: restaurant.geometry?.location,
           map: this.map,
           title: restaurant.name
         });
+        
         this.markers.push(marker);
 
         // Add click event listener to show infowindow with details
@@ -150,6 +151,18 @@ export class HomeComponent implements OnInit
         });
         
       });
+      for (let i = 0; i < this.restaurants.length; i++) {
+        this.googleMapsApiService.getPlaceDetails(this.restaurants[i].place_id, this.map).then((res) => {
+          let restaurant = this.googleMapsApiService.convertToRestaurant(res, res.photos);
+          this.restaurants_real.push(restaurant);
+          //console.log(this.restaurants_real);
+        }).catch((error) => { console.log(error); });
+      }
+      console.log(this.restaurants_real);
+   
+
+
+      
 
       } else {
         console.error('Places search request failed. Status:', status);
@@ -174,29 +187,6 @@ export class HomeComponent implements OnInit
       marker.setMap(null);
     });
     this.markers = [];
-  }
-
-  getPlaceDetails(placeId : string | undefined='' , map : any): void 
-  {
-    let service  = new google.maps.places.PlacesService(map);
-    const request = {
-      placeId: placeId,
-      //fields: ['name', 'rating', 'formatted_phone_number', 'geometry']
-    };
-
-    service?.getDetails(request, (results, status) => 
-    {
-      if (status === google.maps.places.PlacesServiceStatus.OK) 
-      {
-        //Json stringify result 
-        console.log(JSON.stringify(results));
-      }
-      else 
-      {
-        console.error('Failed to Find Place Search Details:', status);
-      }
-    }
-    );
   }
 
 

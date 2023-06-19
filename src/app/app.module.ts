@@ -6,15 +6,19 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule , HTTP_INTERCEPTORS} from '@angular/common/http';
 
-import { GoogleMapsApiService  } from './google.map.services';
+import { GoogleMapsApiService  } from './places.services';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { HttpLoggingInterceptor } from './http-logging.interceptor';
+import { RestaurantDetailsComponent } from './restaurant-details/restaurant-details.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    RestaurantDetailsComponent,
+    RestaurantComponent,
   ],
   imports: [
     BrowserModule,
