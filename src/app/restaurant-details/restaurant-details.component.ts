@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { GoogleMapsApiService } from '../places.services';
 import { Restaurant } from '../restaurant';
 import { Loader } from '@googlemaps/js-api-loader';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-restaurant-details',
   templateUrl: './restaurant-details.component.html',
@@ -15,7 +17,7 @@ export class RestaurantDetailsComponent implements OnInit {
   placeId: string | undefined;
   restaurant: Restaurant | undefined;
 
-
+  constructor(private router: Router) {}
   ngOnInit() {
 
     const loader = new Loader({
@@ -41,6 +43,10 @@ export class RestaurantDetailsComponent implements OnInit {
 
    
   }
+  navigateToParent() {
+    this.router.navigate(['.'], { relativeTo: this.route.parent });
+  }
+  
 
 
 }

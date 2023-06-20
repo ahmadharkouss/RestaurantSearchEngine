@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit
   constructor(@Inject(GoogleMapsApiService) private googleMapsApiService: GoogleMapsApiService) { }
 
   ngOnInit() {
+    
     const loader = new Loader({
       apiKey: 'AIzaSyD_N63Ju65PKL0xqCyqBsNCvIw38MBTCGg',
       libraries: ['places'],
