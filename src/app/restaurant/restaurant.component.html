@@ -9,7 +9,8 @@
 
 <!-- Display photos -->
 
-<a [routerLink]="['/details', restaurant.place_id]" [queryParams]="{ restaurant: getRestaurantString() }">Learn More</a>
+<a [routerLink]="['/details', restaurant.place_id]" [queryParams]="{ restaurant: getRestaurantString() }" queryParamsHandling="merge" target="_blank" rel="noopener noreferrer">Learn More</a>
+
 
 
 
