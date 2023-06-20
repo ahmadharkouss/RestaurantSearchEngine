@@ -1,8 +1,8 @@
 <section class="listing">
     <h2 class="listing-heading">{{ restaurant.name }}</h2>
     <img  class="listing-photo" [src]="restaurant.photos[0]" alt="Restaurant Photo">
-    <p class="listing-location">{{ restaurant.vicinity }}</p>
-    <p class="listing-rating">Rating: {{ restaurant.rating }}</p>
+    <p class="listing-location">📍{{restaurant.vicinity }}</p>
+    <p class="listing-rating">⭐Rating: {{ restaurant.rating }}</p>
     <a [routerLink]="['/details', restaurant.place_id]"  target="_blank" rel="noopener noreferrer">Learn More</a>
 </section>
 
