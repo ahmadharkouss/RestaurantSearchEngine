@@ -1,0 +1,39 @@
+
+.listing {
+    background: #008080;
+    border-radius: 30px;
+    padding-bottom: 30px;
+    color:  #dddbcb;
+  }
+  .listing-heading {
+    padding: 10px 20px 0 20px;
+    color:  #dddbcb;
+  }
+  .listing-photo {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 30px 30px 0 0;
+    color:  #dddbcb;
+  }
+  .listing-location {
+    padding: 10px 20px 20px 20px;
+    color:  #dddbcb;
+  }
+ 
+  .listing-rating
+  {
+    padding: 10px 20px 20px 20px;
+    color:  #dddbcb;
+  }
+  
+  section.listing a {
+    padding-left: 20px;
+    text-decoration: none;
+    color:  #dddbcb;
+  }
+  section.listing a::after {
+    content: "\203A";
+    margin-left: 5px;
+    color:  #dddbcb;
+  }

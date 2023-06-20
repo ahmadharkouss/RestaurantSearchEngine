@@ -15,7 +15,7 @@ export class GoogleMapsApiService {
       service?.getDetails(request, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
           if (results !== null) {
-            const strarr = results?.photos?.map((photo) => photo.getUrl());
+            const strarr = results?.photos?.map((photo) => photo.getUrl({ maxWidth: 400, maxHeight: 400}));
             const res = this.convertToRestaurant(results, strarr || []);
             resolve(res);
           } else {

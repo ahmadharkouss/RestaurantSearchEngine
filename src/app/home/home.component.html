@@ -70,7 +70,12 @@
     </div>
     
 
-    <app-restaurant *ngFor="let restaurant of restaurants_real" [restaurant]="restaurant"></app-restaurant>
+    <section class="results">
+
+      <app-restaurant *ngFor="let restaurant of restaurants_real" [restaurant]="restaurant"></app-restaurant>
+      
+     </section>  
+
   </main>
 
   <footer>

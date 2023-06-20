@@ -1,17 +1,11 @@
-<h3>{{ restaurant.name }}</h3>
-<img [src]="restaurant.photos[0]" alt="Restaurant Photo">
-<p>{{ restaurant.vicinity }}</p>
-<p>Rating: {{ restaurant.rating }}</p>
-<p>Price Level: {{ restaurant.price_level }}</p>
-<p>Open Now: {{ restaurant.opening_hours.open_now }}</p>
-<p>Website: {{ restaurant.website }}</p>
-<p>Phone Number: {{ restaurant.formatted_phone_number }}</p>
-<p>Types: {{ restaurant.types }}</p>
+<section class="listing">
+    <h2 class="listing-heading">{{ restaurant.name }}</h2>
+    <img  class="listing-photo" [src]="restaurant.photos[0]" alt="Restaurant Photo">
+    <p class="listing-location">{{ restaurant.vicinity }}</p>
+    <p class="listing-rating">Rating: {{ restaurant.rating }}</p>
+    <a [routerLink]="['/details', restaurant.place_id]"  target="_blank" rel="noopener noreferrer">Learn More</a>
+</section>
 
-
-<!-- Display photos -->
-
-<a [routerLink]="['/details', restaurant.place_id]"  target="_blank" rel="noopener noreferrer">Learn More</a>
 
 
 
