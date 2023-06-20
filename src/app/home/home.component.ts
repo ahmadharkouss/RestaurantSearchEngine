@@ -2,6 +2,7 @@ import { Component, OnInit , Inject } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
 import { GoogleMapsApiService } from '../places.services';
 import { Restaurant } from '../restaurant';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit
   public restaurants: google.maps.places.PlaceResult[] = [];
   public restaurants_real:Restaurant[] = [];
   public markers: google.maps.Marker[] = [];
+  public restaurants_real$: Subject<Restaurant[]> = new Subject<Restaurant[]>();
   constructor(@Inject(GoogleMapsApiService) private googleMapsApiService: GoogleMapsApiService) { }
 
   ngOnInit() {
@@ -97,6 +99,9 @@ export class HomeComponent implements OnInit
   
 
   searchNearbyRestaurants(location: google.maps.LatLng, filterOptions?: any) {
+    //clear the list of restaurants and  restaurants_real
+    this.restaurants = [];
+    this.restaurants_real = [];
     const request: google.maps.places.PlaceSearchRequest = {
       location: location,
       radius: 1000, // Search radius in meters
@@ -143,7 +148,6 @@ export class HomeComponent implements OnInit
               <p>${restaurant.vicinity}</p>
               <p>Rating: ${restaurant.rating}</p>
               <p>Price Level: ${restaurant.price_level}</p>
-              <p>Phone: ${restaurant.formatted_phone_number}</p>
             `,
             maxWidth: 200 // Customize the maximum width of the info window
           });
@@ -151,14 +155,16 @@ export class HomeComponent implements OnInit
         });
         
       });
+      
       for (let i = 0; i < this.restaurants.length; i++) {
         this.googleMapsApiService.getPlaceDetails(this.restaurants[i].place_id, this.map).then((res) => {
           let restaurant = this.googleMapsApiService.convertToRestaurant(res, res.photos);
           this.restaurants_real.push(restaurant);
-          //console.log(this.restaurants_real);
         }).catch((error) => { console.log(error); });
       }
-      console.log(this.restaurants_real);
+
+      this.restaurants_real$.next(this.restaurants_real);
+     
    
       } else {
         console.error('Places search request failed. Status:', status);

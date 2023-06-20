@@ -59,7 +59,9 @@
         </ul>
       </div>
     </div>
-    <app-restaurant *ngFor="let restaurant of  restaurants_real"[restaurant]="restaurant" ></app-restaurant>
+    <div *ngIf="restaurants_real$ | async as restaurants_real">
+      <app-restaurant *ngFor="let restaurant of restaurants_real" [restaurant]="restaurant"></app-restaurant>
+    </div>
       
   
   </main>

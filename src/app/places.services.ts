@@ -17,7 +17,6 @@ export class GoogleMapsApiService {
           if (results !== null) {
             const strarr = results?.photos?.map((photo) => photo.getUrl());
             const res = this.convertToRestaurant(results, strarr || []);
-            console.log(res.photos);
             resolve(res);
           } else {
             reject(new Error('Place Details not found'));
