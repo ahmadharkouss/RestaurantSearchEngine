@@ -160,10 +160,6 @@ export class HomeComponent implements OnInit
       }
       console.log(this.restaurants_real);
    
-
-
-      
-
       } else {
         console.error('Places search request failed. Status:', status);
         this.restaurants = [];

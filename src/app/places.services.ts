@@ -29,13 +29,6 @@ export class GoogleMapsApiService {
     });
   }
 
-  get_all_place_details(restaurants: any[], map: any): Promise<any[]> {
-    const placePromises: Promise<any>[] = restaurants.map((restaurant) => {
-      const placeId = restaurant.place_id;
-      return this.getPlaceDetails(placeId, map);
-    });
-    return Promise.all(placePromises);
-  }
 
   convertToRestaurant(jsonObj: any, strarr: string[]): Restaurant {
     const restaurant: Restaurant = {
@@ -72,7 +65,5 @@ export class GoogleMapsApiService {
     return restaurant;
   }
 
-  convertToRestaurants(jsonObj: any[]): Restaurant[] {
-    return jsonObj.map((restaurant) => this.convertToRestaurant(restaurant, []));
-  }
+ 
 }

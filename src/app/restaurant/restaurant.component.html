@@ -8,12 +8,10 @@
 <p>Types: {{ restaurant.types }}</p>
 
 <!-- Display photos -->
-<div>
-  <h4>Photos:</h4>
-  <div *ngFor="let photo of restaurant.photos">
-    <img [src]="photo" alt="Restaurant Photo">
-  </div>
-</div>
+
+<a [routerLink]="['/details', restaurant.place_id]" [queryParams]="{ restaurant: getRestaurantString() }">Learn More</a>
+
+
 
 
 

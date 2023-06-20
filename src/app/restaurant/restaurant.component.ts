@@ -8,10 +8,8 @@ import { Restaurant } from '../restaurant';
 })
 export class RestaurantComponent {
   @Input() restaurant! : Restaurant;
-
-  isString(value: any): boolean {
-  return typeof value === 'string';
-}
-
+  getRestaurantString(): string {
+    return JSON.stringify(this.restaurant);
+  }
 
 }
