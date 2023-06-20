@@ -2,6 +2,8 @@ import { Component, OnInit , Inject } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
 import { GoogleMapsApiService } from '../places.services';
 import { Restaurant } from '../restaurant';
+import { environment } from 'src/environments/environment';
+
 
 
 @Component({
@@ -149,6 +151,7 @@ export class HomeComponent implements OnInit
               <p>${restaurant.vicinity}</p>
               <p>Rating: ${restaurant.rating}</p>
               <p>Price Level: ${restaurant.price_level}</p>
+              <p><a href="${environment.detailsUrl}${restaurant.place_id}" target="_blank">More Details</a></p>
             `,
             maxWidth: 200 // Customize the maximum width of the info window
           });

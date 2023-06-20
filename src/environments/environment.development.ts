@@ -1,4 +1,4 @@
 export const environment = {
-    production: true,
-    apiUrl: 'https://maps.googleapis.com/maps'
-};
+    production: false,
+    detailsUrl: 'http://localhost:4200/details/',
+  };
