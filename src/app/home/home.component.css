@@ -1,7 +1,27 @@
+.logo {
+  display: block;
+  margin: 0;
+  width: 25%;
+  max-width: 300px;
+  height: auto;
+}
+
+.all {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.right {
+  flex: 3;
+}
+
+
+
 .map-container {
   display: flex;
   flex-direction: row;
-  height: 680px;
+  height: 750px;
   width: 100%;
   position: relative;
 }
@@ -42,49 +62,50 @@
 #search-input {
   width: 98%;
   height: 40px;
-  border-radius: 5px;
-  border: 5px solid #BF1922;
+  border-radius: 50px;
+  border: 5px solid #008080;
   padding: 10px;
   font-size: 30px;
   margin-bottom: 10px;
   text-align: center;
-  font-style: oblique;
-  color: #BF1922;
+  
+  color: #008080;
 }
 
 input::placeholder {
   font-weight: bold;
   opacity: 0.5;
-  color: #392370;
+  color: #dddbcb;
 }
 
 .filters label {
-  color: #392370;
+  color: #dddbcb;
   font-weight: bold;
   margin-right: 10px;
 }
 
 .filters select {
-  color: #392370;
+  color: #008080;
   
-  border: 2px solid #BF1922;
+  border: 3.5px solid #008080;
   padding: 5px;
   border-radius: 5px;
   margin-right: 10px;
+  border-radius: 50px;
 }
 
 .filters input[type="text"] {
-  color: #392370;
-  border: none;
-  padding: 5px;
+  color: #008080;
+  padding: 3.5px;
   border-radius: 5px;
 }
 
 
 .type input[type="text"] {
-  border: 2px solid #BF1922;
+  border: 3.5px solid #008080;
   border-radius: 5px;
   padding: 5px;
   margin-right: 10px;
-  color: #392370;
+  color: #008080;
+  border-radius: 50px;
 }
