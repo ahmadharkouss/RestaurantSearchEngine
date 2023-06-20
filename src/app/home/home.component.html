@@ -1,69 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <link rel="icon" type="image/x-icon" href="assets/logo.ico"> 
-
+  <link rel="icon" type="image/x-icon" href="assets/logo.ico">
 </head>
-
 <body>
-
-  <header >
+  <header>
   </header>
-
   <main>
-
-    <label for="search-input">Search</label>
-    <input id="search-input" type="text" placeholder="Search for a location">
-
+    <label for="search-input"></label>
+    <input id="search-input" type="text" placeholder="Search ...">
 
     <div class="restaurant-list">
       <div class="filters">
-        <label for="ranked-by">Ranked by:</label>
+        <label for="ranked-by"></label>
         <select id="ranked-by" (change)="applyFilters()">
           <option value="google.maps.places.RankBy.PROMINENCE">Popular</option>
           <option value="google.maps.places.RankBy.DISTANCE">Distance</option>
         </select>
         
-        <label for="min-price-filter">Minimum Price Level:</label>
+        <label for="min-price-filter">Min €</label>
         <select id="min-price-filter" (change)="applyFilters()">
           <option value="">All</option>
-          <option value="0">Free</option>
-          <option value="1">Inexpensive</option>
-          <option value="2">Moderate</option>
-          <option value="3">Expensive</option>
-          <option value="4">Very Expensive</option>
+          <option value="0">€</option>
+          <option value="1">€€</option>
+          <option value="2">€€€</option>
+          <option value="3">€€€€</option>
+          <option value="4">€€€€€</option>
         </select>
         
-        <label for="max-price-filter">Maximum Price Level:</label>
+        <label for="max-price-filter">Max €</label>
         <select id="max-price-filter" (change)="applyFilters()">
           <option value="">All</option>
-          <option value="0">Free</option>
-          <option value="1">Inexpensive</option>
-          <option value="2">Moderate</option>
-          <option value="3">Expensive</option>
-          <option value="4">Very Expensive</option>
+          <option value="0">€</option>
+          <option value="1">€€</option>
+          <option value="2">€€€</option>
+          <option value="3">€€€€</option>
+          <option value="4">€€€€€</option>
         </select>
-        
-        <label for="type-filter">Type of Restaurant:</label>
-        <input id="type-filter" type="text" placeholder="Enter type of restaurant" (change)="applyFilters()">
+
+        <span class="type">
+          <label for="type-filter">Type</label>
+          <input id="type-filter" type="text"  (change)="applyFilters()">
+        </span>
       </div>
     </div>
 
     <div class="map-container">
       <div id="map" class="map"></div>
+      <div class="image-container">
+        <img src="../../assets/images/image1.png" alt="where?">
+      </div>
     </div>
-     
-      
-    <app-restaurant *ngFor="let restaurant of  restaurants_real"[restaurant]="restaurant" ></app-restaurant>
-      
-  
+    
+
+    <app-restaurant *ngFor="let restaurant of restaurants_real" [restaurant]="restaurant"></app-restaurant>
   </main>
 
   <footer>
-  
   </footer>
-
 </body>
-
 </html>
+
