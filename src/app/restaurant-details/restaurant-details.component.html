@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-
-
 </head>
 
 <body>
-
-  <header >
+  <header>
+    <button id="return" (click)="navigateToParent()">Return</button>
+    <img class="logo" src="assets/images/logo.png" alt="logo" aria-hidden="true" (click)="navigateToParent()">
   </header>
 
   <main>
-
     <div id="map" class="map"></div>
 
+    <section class="restaurant-details">
+      <h3>{{ restaurant?.name }}</h3>
 
+      <div class="slideshow-container">
+        <div *ngFor="let photo of restaurant?.photos; let i = index" class="slideshow-image" [class.active]="i === slideIndex">
+          <img [src]="photo" alt="Restaurant Photo">
+        </div>
+  
 
-  <h3>{{ restaurant?.name }}</h3>
-  <p>{{ restaurant?.vicinity }}</p>
-  <p>Rating: {{ restaurant?.rating }}</p>
-  <p>Price Level: {{ restaurant?.price_level }}</p>
-  <p>Hours: {{ restaurant?.opening_hours?.weekday_text }}</p>
-  <p>Address: {{ restaurant?.formatted_address }}</p>
-  <a [href]="restaurant?.website" target="_blank">Website</a>
-  <p>Phone Number: {{ restaurant?.formatted_phone_number }}</p>
-  <p>Types: {{ restaurant?.types }}</p>
+      <div class="slideshow-controls">
+        <button (click)="changeSlide(-1)" class="controls">Previous</button>
+        <div class="controls-space">📍{{ restaurant?.vicinity }}</div>
+        <button (click)="changeSlide(1)" class="controls">Next</button>
+      </div>
 
-  <div>
-    <h4>Reviews:</h4>
-    <div *ngFor="let review of restaurant?.reviews">
-      <p>{{ review.author_name }}</p>
-      <p>{{ review.rating }}</p>
-      <p>{{ review.text }}</p>
-      <p>{{ review.time }}</p>
+      <div class="info">
+
+        <p>Rating: {{ restaurant?.rating }}</p>
+        <p>Price Level: {{ restaurant?.price_level }}</p>
+        <p>Hours: {{ restaurant?.opening_hours?.weekday_text }}</p>
+        <a [href]="restaurant?.website" target="_blank">Website</a>
+        <p>Phone Number: {{ restaurant?.formatted_phone_number }}</p>
+
+      </div >
+
     </div>
-  </div>
 
-  <div>
-    <h4>Photos:</h4>
-    <div *ngFor="let photo of restaurant?.photos">
-      <img [src]="photo" alt="Restaurant Photo">
-    </div>
-  </div>
 
-  <button (click)="navigateToParent()">Go to Parent</button>
-
+      <div>
+        <h4>Reviews:</h4>
+        <div *ngFor="let review of restaurant?.reviews">
+          <p>{{ review.author_name }}</p>
+          <p>{{ review.rating }}</p>
+          <p>{{ review.text }}</p>
+          <p>{{ review.time }}</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
-  
   </footer>
 
 </body>
 
 </html>
-

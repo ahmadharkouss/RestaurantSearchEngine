@@ -16,6 +16,8 @@ export class RestaurantDetailsComponent implements OnInit {
   service: GoogleMapsApiService = inject(GoogleMapsApiService);
   placeId: string | undefined;
   restaurant: Restaurant | undefined;
+  slideIndex = 0;
+
 
   constructor(private router: Router) {}
   ngOnInit() {
@@ -36,6 +38,7 @@ export class RestaurantDetailsComponent implements OnInit {
       console.log("place id "+this.placeId);
       this.service.getPlaceDetails(this.placeId, this.map).then((restaurant) => {
         this.restaurant = restaurant;
+        console.log(this.restaurant);
       }).catch((error) => {
         console.log(error);
       });
@@ -45,6 +48,22 @@ export class RestaurantDetailsComponent implements OnInit {
   }
   navigateToParent() {
     this.router.navigate(['.'], { relativeTo: this.route.parent });
+  }
+  changeSlide(n: number) {
+    const slides = document.getElementsByClassName("slideshow-image");
+    this.slideIndex += n;
+
+    if (this.slideIndex >= slides.length) {
+      this.slideIndex = 0;
+    } else if (this.slideIndex < 0) {
+      this.slideIndex = slides.length - 1;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("active");
+    }
+
+    slides[this.slideIndex].classList.add("active");
   }
   
 

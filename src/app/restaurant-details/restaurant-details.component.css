@@ -1,0 +1,93 @@
+.logo {
+    display: block;
+    margin: 0;
+    width: 25%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  .slideshow-image {
+    display: none;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .slideshow-image.active {
+    display: block;
+  }
+  
+  .slideshow-controls {
+    text-align: left;
+    margin-top: 10px;
+  }
+  
+  
+  .slideshow-controls button {
+    background-color: #008080;
+    border: none;
+    color: #dddbcb;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-right: 5px;
+    border: 5px solid #dddbcb;
+    cursor: pointer;
+    font-size: medium;
+  }
+  
+  .slideshow-controls button:hover {
+    background-color: #dddbcb;
+  }
+  
+  .controls-space {
+    display: inline-block;
+    width: 420px;
+    text-align: center;
+    font-size: large;
+    font-style: bold;
+  }
+  
+  .restaurant-details {
+    color: #dddbcb;
+  }
+  
+  #return {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+  
+  h3 {
+    text-align: center;
+    font-size: 40px;
+  }
+
+
+  button {
+    background-color: #008080;
+    color: #dddbcb;
+    padding: 5px 10px;
+    border: 5px solid #dddbcb;
+    cursor: pointer;
+    font-size: large;
+  }
+  
+  button:hover {
+    background-color: #555555;
+  }
+  .info {
+    position : absolute;
+    top : 0;
+    right : 360px;  
+    padding: 10px; 
+  }
+  
+
+  
+  
+  

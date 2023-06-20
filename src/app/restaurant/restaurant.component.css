@@ -17,13 +17,13 @@
     color:  #dddbcb;
   }
   .listing-location {
-    padding: 10px 20px 20px 20px;
+ 
     color:  #dddbcb;
   }
  
   .listing-rating
   {
-    padding: 10px 20px 20px 20px;
+
     color:  #dddbcb;
   }
   
@@ -37,3 +37,9 @@
     margin-left: 5px;
     color:  #dddbcb;
   }
+
+  .learn-more-link {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  

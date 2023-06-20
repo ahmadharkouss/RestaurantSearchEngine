@@ -3,7 +3,8 @@
     <img  class="listing-photo" [src]="restaurant.photos[0]" alt="Restaurant Photo">
     <p class="listing-location">📍{{restaurant.vicinity }}</p>
     <p class="listing-rating">⭐Rating: {{ restaurant.rating }}</p>
-    <a [routerLink]="['/details', restaurant.place_id]"  target="_blank" rel="noopener noreferrer">Learn More</a>
+    <a [routerLink]="['/details', restaurant.place_id]" target="_blank" rel="noopener noreferrer"
+    class="learn-more-link">Learn More</a>
 </section>
 
 
