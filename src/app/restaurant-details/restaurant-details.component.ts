@@ -30,8 +30,9 @@ export class RestaurantDetailsComponent implements OnInit {
         center: { lat: 45.760795414609724, lng: 4.838903326244934 },
         zoom: 8
       });
+      this.placeId = this.route.snapshot.paramMap.get('place_id') || '';
+      console.log("place id "+this.placeId);
       this.service.getPlaceDetails(this.placeId, this.map).then((restaurant) => {
-        console.log(restaurant);
         this.restaurant = restaurant;
       }).catch((error) => {
         console.log(error);

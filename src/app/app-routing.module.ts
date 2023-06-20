@@ -14,7 +14,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'details/:name',
+    path: 'details/:place_id',
     component: RestaurantDetailsComponent,
     title: 'Restaurant details'
     
