@@ -24,6 +24,15 @@
   <p>Phone Number: {{ restaurant.formatted_phone_number }}</p>
   <p>Types: {{ restaurant.types }}</p>
 
+  <div>
+    <h4>Reviews:</h4>
+    <div *ngFor="let review of restaurant.reviews">
+      <p>{{ review.author_name }}</p>
+      <p>{{ review.rating }}</p>
+      <p>{{ review.text }}</p>
+      <p>{{ review.time }}</p>
+    </div>
+  </div>
 
   <div>
     <h4>Photos:</h4>

@@ -2,7 +2,7 @@ import { Component, OnInit , Inject } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
 import { GoogleMapsApiService } from '../places.services';
 import { Restaurant } from '../restaurant';
-import { Subject } from 'rxjs';
+
 
 @Component({
   selector: 'app-home',
@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit
   public restaurants: google.maps.places.PlaceResult[] = [];
   public restaurants_real:Restaurant[] = [];
   public markers: google.maps.Marker[] = [];
-  public restaurants_real$: Subject<Restaurant[]> = new Subject<Restaurant[]>();
   constructor(@Inject(GoogleMapsApiService) private googleMapsApiService: GoogleMapsApiService) { }
 
   ngOnInit() {
@@ -99,12 +98,12 @@ export class HomeComponent implements OnInit
   
 
   searchNearbyRestaurants(location: google.maps.LatLng, filterOptions?: any) {
-    //clear the list of restaurants and  restaurants_real
     this.restaurants = [];
     this.restaurants_real = [];
+
     const request: google.maps.places.PlaceSearchRequest = {
       location: location,
-      radius: 1000, // Search radius in meters
+      radius: 2000, // Search radius in meters
       type: 'restaurant' // Limit results to restaurants
     };
   
@@ -160,11 +159,10 @@ export class HomeComponent implements OnInit
         this.googleMapsApiService.getPlaceDetails(this.restaurants[i].place_id, this.map).then((res) => {
           let restaurant = this.googleMapsApiService.convertToRestaurant(res, res.photos);
           this.restaurants_real.push(restaurant);
+          //console.log(this.restaurants_real);
         }).catch((error) => { console.log(error); });
       }
-
-      this.restaurants_real$.next(this.restaurants_real);
-     
+      console.log(this.restaurants_real);
    
       } else {
         console.error('Places search request failed. Status:', status);
