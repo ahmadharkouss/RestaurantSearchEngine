@@ -14,20 +14,19 @@
 
 
 
-  <h3>{{ restaurant.name }}</h3>
-  <p>{{ restaurant.vicinity }}</p>
-  <p>Rating: {{ restaurant.rating }}</p>
-  <p>Price Level: {{ restaurant.price_level }}</p>
-  <p>Open Now: {{ restaurant.opening_hours.open_now }}</p>
-  <p>Hours: {{ restaurant.opening_hours.weekday_text }}</p>
-  <p>Address: {{ restaurant.formatted_address }}</p>
-  <a [href]="restaurant.website" target="_blank">Website</a>
-  <p>Phone Number: {{ restaurant.formatted_phone_number }}</p>
-  <p>Types: {{ restaurant.types }}</p>
+  <h3>{{ restaurant?.name }}</h3>
+  <p>{{ restaurant?.vicinity }}</p>
+  <p>Rating: {{ restaurant?.rating }}</p>
+  <p>Price Level: {{ restaurant?.price_level }}</p>
+  <p>Hours: {{ restaurant?.opening_hours?.weekday_text }}</p>
+  <p>Address: {{ restaurant?.formatted_address }}</p>
+  <a [href]="restaurant?.website" target="_blank">Website</a>
+  <p>Phone Number: {{ restaurant?.formatted_phone_number }}</p>
+  <p>Types: {{ restaurant?.types }}</p>
 
   <div>
     <h4>Reviews:</h4>
-    <div *ngFor="let review of restaurant.reviews">
+    <div *ngFor="let review of restaurant?.reviews">
       <p>{{ review.author_name }}</p>
       <p>{{ review.rating }}</p>
       <p>{{ review.text }}</p>
@@ -37,7 +36,7 @@
 
   <div>
     <h4>Photos:</h4>
-    <div *ngFor="let photo of restaurant.photos">
+    <div *ngFor="let photo of restaurant?.photos">
       <img [src]="photo" alt="Restaurant Photo">
     </div>
   </div>

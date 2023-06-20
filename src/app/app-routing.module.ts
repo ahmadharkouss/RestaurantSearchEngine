@@ -14,12 +14,10 @@ const routes: Routes = [
     }
   },
   {
-    path: 'details/:place_id',
+    path: 'details/:name',
     component: RestaurantDetailsComponent,
-    data: {
-      title: 'Restaurant details',
-      target: '_blank' // Open in a new tab
-    }
+    title: 'Restaurant details'
+    
   }
 ];
 
