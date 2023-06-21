@@ -14,11 +14,17 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## Instructions
+
+1. Enter the location and click on one of the autocomplete searches; otherwise, it will not work.
+2. Apply the filters you want.
+
 ## ⚠️ Warning
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
-## Photos 
+
+## Preview
 
 ![image](images_repo/1.png)
 ![image](images_repo/2.png)
