@@ -11,45 +11,55 @@
     max-width: 100%;
     margin: auto;
   }
-  
+
   .slideshow-image {
     display: none;
     max-width: 100%;
     height: auto;
   }
-  
+
+  .slideshow-image img {
+    width: 100%;
+    height: auto;
+  }
+
   .slideshow-image.active {
     display: block;
   }
-  
+
   .slideshow-controls {
-    text-align: left;
+    text-align: center;
     margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  
-  
-  .slideshow-controls button {
+
+  .controls {
     background-color: #008080;
-    border: none;
     color: #dddbcb;
     padding: 8px 16px;
     cursor: pointer;
-    margin-right: 5px;
     border: 5px solid #dddbcb;
     cursor: pointer;
-    font-size: medium;
+    font-size: 100%;
+    max-width: 110px;
+    text-size-adjust: auto;
   }
   
   .slideshow-controls button:hover {
-    background-color: #dddbcb;
+    background-color: #555555;
   }
   
   .controls-space {
     display: inline-block;
-    width: 410px;
     text-align: center;
     font-size: large;
     font-style: bold;
+    padding-left: 10px;
+    padding-right: 15px;
+    width: calc(100% - 300px);
+    height: auto;
   }
   
   .restaurant-details {
@@ -85,6 +95,7 @@
   {
     display: flex;
     flex-direction: row ;
+    align-items: center;
   }
 
   .info
@@ -104,7 +115,7 @@
   .slideshow
   {
     order: 1;
-  
+    width: 60%;
   }
 
 
@@ -124,5 +135,4 @@
     border : 5px solid #dddbcb;
     padding: 90px;
   }
-  
   

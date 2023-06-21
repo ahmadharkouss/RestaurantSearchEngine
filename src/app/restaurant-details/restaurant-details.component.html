@@ -29,16 +29,16 @@
 
           <div class="slideshow-controls">
             <button (click)="changeSlide(-1)" class="controls">Previous</button>
-            <div class="controls-space">📍{{ restaurant?.vicinity }}</div>
+            <p class="controls-space">📍 {{ restaurant?.vicinity }}</p>
             <button (click)="changeSlide(1)" class="controls">Next</button>
           </div>
 
         </div>
 
         <div class="info" style="font-size: 25px;">
-          <p>⭐Rating: {{ restaurant?.rating }}</p>
-          <p>💰Price Level: {{ restaurant?.price_level }}</p>
-          <p>🕕Hours:</p>
+          <p>⭐ Rating: {{ restaurant?.rating }}</p>
+          <p>💰 Price Level: {{ restaurant?.price_level }}</p>
+          <p>🕕 Hours:</p>
           <ul>
             <li *ngFor="let hours of restaurant?.opening_hours?.weekday_text">
               {{ hours }}
