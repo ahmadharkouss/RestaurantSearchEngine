@@ -18,7 +18,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
-## photos 
+## Photos 
 
 ![image](images_repo/1.png)
 ![image](images_repo/2.png)
