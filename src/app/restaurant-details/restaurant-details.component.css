@@ -46,7 +46,7 @@
   
   .controls-space {
     display: inline-block;
-    width: 420px;
+    width: 410px;
     text-align: center;
     font-size: large;
     font-style: bold;
@@ -80,14 +80,49 @@
   button:hover {
     background-color: #555555;
   }
-  .info {
-    position : absolute;
-    top : 0;
-    right : 360px;  
-    padding: 10px; 
+ 
+  .all
+  {
+    display: flex;
+    flex-direction: row ;
+  }
+
+  .info
+  {
+    order: 2;
+    padding: 40px;
+    border : 5px solid #dddbcb;
+    width: 100%;
+  }
+  .info p a 
+  {
+    font-size: large;
+    color: #dddbcb;
+  }
+
+
+  .slideshow
+  {
+    order: 1;
+  
+  }
+
+
+  .reviews h2 h1
+  {
+    color: #008080;
+  }
+  .reviews h1
+  {
+    text-align: center;
+    font-size: 40px;
+
   }
   
-
-  
+  .reviews
+  {
+    border : 5px solid #dddbcb;
+    padding: 90px;
+  }
   
   

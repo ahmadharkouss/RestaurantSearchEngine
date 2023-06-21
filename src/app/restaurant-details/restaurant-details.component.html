@@ -16,40 +16,55 @@
     <section class="restaurant-details">
       <h3>{{ restaurant?.name }}</h3>
 
-      <div class="slideshow-container">
-        <div *ngFor="let photo of restaurant?.photos; let i = index" class="slideshow-image" [class.active]="i === slideIndex">
-          <img [src]="photo" alt="Restaurant Photo">
-        </div>
-  
+      <div class="all">
 
-      <div class="slideshow-controls">
-        <button (click)="changeSlide(-1)" class="controls">Previous</button>
-        <div class="controls-space">📍{{ restaurant?.vicinity }}</div>
-        <button (click)="changeSlide(1)" class="controls">Next</button>
+        <div class="slideshow">
+
+          <div class="slideshow-container">
+            <div *ngFor="let photo of restaurant?.photos; let i = index" class="slideshow-image" [class.active]="i === slideIndex">
+              <img [src]="photo" alt="Restaurant Photo">
+            </div>
+          </div>
+
+          <div class="slideshow-controls">
+            <button (click)="changeSlide(-1)" class="controls">Previous</button>
+            <div class="controls-space">📍{{ restaurant?.vicinity }}</div>
+            <button (click)="changeSlide(1)" class="controls">Next</button>
+          </div>
+
+        </div>
+
+        <div class="info" style="font-size: 25px;">
+          <p>⭐Rating: {{ restaurant?.rating }}</p>
+          <p>💰Price Level: {{ restaurant?.price_level }}</p>
+          <p>🕕Hours:</p>
+          <ul>
+            <li *ngFor="let hours of restaurant?.opening_hours?.weekday_text">
+              {{ hours }}
+            </li>
+          </ul>
+          <a [href]="restaurant?.website" target="_blank" style="color: #008080; font-size: x-large;">Reservation</a>
+        <br>
+        <br>
+        <a [href]="'tel:' + sanitizePhoneNumber(restaurant?.formatted_phone_number)" target="_blank" style="color: #008080;font-size: x-large;">📱 {{ restaurant?.formatted_phone_number }}</a>
+
+
+        </div>
+        
+
       </div>
 
-      <div class="info">
-
-        <p>Rating: {{ restaurant?.rating }}</p>
-        <p>Price Level: {{ restaurant?.price_level }}</p>
-        <p>Hours: {{ restaurant?.opening_hours?.weekday_text }}</p>
-        <a [href]="restaurant?.website" target="_blank">Website</a>
-        <p>Phone Number: {{ restaurant?.formatted_phone_number }}</p>
-
-      </div >
-
-    </div>
-
-
-      <div>
-        <h4>Reviews:</h4>
+      <div class="reviews">
+        <h1>Reviews</h1>
         <div *ngFor="let review of restaurant?.reviews">
-          <p>{{ review.author_name }}</p>
-          <p>{{ review.rating }}</p>
+          <h2 style="color: #008080;">{{ review.author_name }}</h2>
+          <ng-container *ngFor="let _ of [].constructor(restaurant?.rating)">
+            ⭐
+          </ng-container>
           <p>{{ review.text }}</p>
-          <p>{{ review.time }}</p>
         </div>
       </div>
+
     </section>
   </main>
 

@@ -65,6 +65,16 @@ export class RestaurantDetailsComponent implements OnInit {
 
     slides[this.slideIndex].classList.add("active");
   }
+
+
+  sanitizePhoneNumber(phoneNumber: string | undefined): string | undefined {
+    return phoneNumber?.replace(/\D/g, '');
+  }
+  repeatEmoji(rating: number | undefined): number[] {
+    return Array(rating).fill(0);
+  }
+  
+  
   
 
 
