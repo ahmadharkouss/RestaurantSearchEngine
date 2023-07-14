@@ -2,7 +2,7 @@
 
 ## Production server
 
-Hosted on https://restofinders.com/
+Hosted with Netify on https://restofinders.com/
 
 ## Development server
 
